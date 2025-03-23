@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占卜网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>欢迎来到占卜网站</h1>
+        <p>选择一种抽卡方式，探索你的命运。</p>
+    </header>
+
+    <main>
+        <section id="抽卡选择">
+            <button onclick="showCard('probability')">概率抽卡</button>
+            <button onclick="showCard('chakra')">脉轮抽卡</button>
+            <button onclick="showCard('color')">颜色抽卡</button>
+            <button onclick="showCard('tarot')">塔罗牌抽卡</button>
+        </section>
+
+        <!-- 抽卡区域 -->
+        <section id="抽卡区域">
+            <p>这里显示抽卡结果</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 占卜网站</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
