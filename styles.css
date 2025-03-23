@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+nav {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.section {
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#color-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-block {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border: 1px solid #000;
+}
