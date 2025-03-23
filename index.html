@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -7,12 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>天使神谕</h1>
-        <p>点击下方按钮，抽取一条天使的指引和祝福，感受神圣的力量。</p>
-        <button id="draw-button">抽取神谕</button>
-        <div id="result" class="result"></div>
-        <div id="loading" class="loading">请稍等，正在抽取神谕...</div>
+    <!-- 抽取中消息通知 -->
+    <div id="loadingText">抽取中...</div>
+    
+    <div id="main-container">
+        <h1>✨ 天使神谕 ✨</h1>
+        <p>点击下面的按钮，抽取天使的提醒与启示 </p>
+        <div id="angelMessage">请点击按钮以获取神谕 🦋</div>
+        <button id="extractButton">抽取神谕 </button>
     </div>
 
     <script src="script.js"></script>
