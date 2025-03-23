@@ -32,6 +32,9 @@ drawButton.addEventListener('click', () => {
         resultDiv.innerHTML = `<p>${selectedMessage}</p>`;
         resultDiv.style.opacity = 1; // 显示神谕
 
+        // 弹出窗口显示抽取到的神谕
+        alert("你抽取到的天使神谕是：" + selectedMessage);
+
         // 隐藏加载状态并启用按钮
         loadingDiv.style.display = 'none';
         drawButton.disabled = false;
