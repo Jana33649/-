@@ -2,44 +2,61 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-nav {
+header {
+    margin-bottom: 20px;
     text-align: center;
-    margin: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fc5c7d;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #6a82fb;
+}
+
+.card-section {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fc5c7d;
+    color: white;
 }
 
-.section {
-    text-align: center;
-    margin: 20px;
+button:hover {
+    background-color: #6a82fb;
 }
 
-h2 {
-    color: #333;
-}
-
-p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-#color-result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.color-block {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-    border: 1px solid #000;
+footer {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #fff;
 }
