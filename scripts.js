@@ -1,16 +1,19 @@
-function showCard(type) {
-    let result = "";
-    if (type === "probability") {
-        result = getProbabilityCard();
-    } else if (type === "chakra") {
-        result = getChakraCard();
-    } else if (type === "color") {
-        result = getColorCard();
-    } else if (type === "tarot") {
-        result = getTarotCard();
-    }
+let chakraClicked = false; // 用来记录脉轮抽卡的点击状态
 
-    document.getElementById("抽卡区域").innerHTML = `<p>${result}</p>`;
+function showCard(type) {
+    document.getElementById("抽卡选择").style.display = "none"; // 隐藏选择按钮
+    document.getElementById("抽卡区域").style.display = "block"; // 显示抽卡区域
+
+    if (type === "probability") {
+        document.getElementById("抽卡结果").innerHTML = getProbabilityCard();
+    } else if (type === "chakra") {
+        document.getElementById("chakraCard").style.display = "block";
+        document.getElementById("抽卡结果").innerHTML = "";
+    } else if (type === "color") {
+        document.getElementById("抽卡结果").innerHTML = getColorCard();
+    } else if (type === "tarot") {
+        document.getElementById("抽卡结果").innerHTML = getTarotCard();
+    }
 }
 
 // 概率抽卡
@@ -31,11 +34,16 @@ function getProbabilityCard() {
 
 // 脉轮抽卡
 function getChakraCard() {
+    if (!chakraClicked) {
+        chakraClicked = true;
+        document.getElementById("chakraResult").innerHTML = "你已抽取到脉轮，点击再次获取活跃度";
+        return;
+    }
     const chakras = ["根脉轮", "腹脉轮", "太阳神经丛脉轮", "心脉轮", "喉脉轮", "眉心脉轮", "冠脉轮"];
     const chakraIndex = Math.floor(Math.random() * chakras.length);
     const chakra = chakras[chakraIndex];
     const percentage = Math.floor(Math.random() * 100);
-    
+    chakraClicked = false; // 重置点击状态
     return `你抽到了脉轮卡：${chakra}，活跃度：${percentage}%`;
 }
 
