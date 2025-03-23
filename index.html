@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>占卜网站</title>
+    <title>随机抽卡网站</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>欢迎来到占卜网站</h1>
-        <p>选择一种抽卡方式，探索你的命运。</p>
-    </header>
-
-    <main>
-        <!-- 抽卡选择区域 -->
-        <section id="抽卡选择">
-            <button onclick="showCard('probability')">概率抽卡</button>
-            <button onclick="showCard('chakra')">脉轮抽卡</button>
-            <button onclick="showCard('color')">颜色抽卡</button>
-            <button onclick="showCard('tarot')">塔罗牌抽卡</button>
-        </section>
-
-        <!-- 二级界面: 抽卡区域 -->
-        <section id="抽卡区域" style="display:none;">
-            <div id="chakraCard" style="display:none;">
-                <button onclick="getChakraCard()">抽取脉轮</button>
-                <div id="chakraResult"></div>
-            </div>
-            <p id="抽卡结果"></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 占卜网站</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <div class="container">
+        <h1>随机抽卡</h1>
+        <div class="buttons">
+            <button onclick="showSection('probability')">概率抽卡</button>
+            <button onclick="showSection('chakra')">脉轮抽卡</button>
+            <button onclick="showSection('color')">颜色抽卡</button>
+            <button onclick="showSection('tarot')">塔罗牌抽卡</button>
+        </div>
+        <div id="probability" class="section">
+            <h2>概率抽卡</h2>
+            <button onclick="drawProbability()">抽卡</button>
+            <p id="probabilityResult"></p>
+        </div>
+        <div id="chakra" class="section" style="display: none;">
+            <h2>脉轮抽卡</h2>
+            <button onclick="drawChakra()">抽卡</button>
+            <p id="chakraResult"></p>
+        </div>
+        <div id="color" class="section" style="display: none;">
+            <h2>颜色抽卡</h2>
+            <button onclick="drawColor()">抽卡</button>
+            <p id="colorResult"></p>
+        </div>
+        <div id="tarot" class="section" style="display: none;">
+            <h2>塔罗牌抽卡</h2>
+            <select id="tarotCount">
+                <option value="1">1张</option>
+                <option value="2">2张</option>
+                <option value="3">3张</option>
+            </select>
+            <button onclick="drawTarot()">抽卡</button>
+            <div id="tarotResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
