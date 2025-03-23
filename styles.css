@@ -1,62 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
+/* 全局样式 */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #6a82fb, #fc5c7d);
-    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: #fff;
 }
 
+/* 标题 */
 header {
+    text-align: center;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-header h1 {
+h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
 }
 
-nav button {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #fc5c7d;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-nav button:hover {
-    background-color: #6a82fb;
-}
-
-.card-section {
-    display: none;
-    margin-top: 20px;
+/* 卡片显示区域 */
+#cardDisplay {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 20px;
+    width: 80%;
+    max-width: 400px;
     text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+#cardResult {
+    font-weight: bold;
+    color: #fc5c7d;
+}
+
+/* 抽卡按钮样式 */
 button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    background-color: #fc5c7d;
+    padding: 15px 30px;
+    font-size: 1.5rem;
     color: white;
+    background-color: #6a82fb;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
 }
 
 button:hover {
-    background-color: #6a82fb;
+    background-color: #fc5c7d;
+    transform: scale(1.05);
 }
 
+/* 页脚 */
 footer {
     margin-top: 30px;
+    text-align: center;
     font-size: 1rem;
     color: #fff;
 }

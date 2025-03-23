@@ -3,50 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>抽卡网站</title>
+    <title>抽卡结果显示</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 主体结构 -->
+
+    <!-- 标题部分 -->
     <header>
-        <h1>抽卡网站</h1>
-        <nav>
-            <button id="probabilityBtn">概率抽卡</button>
-            <button id="chakraBtn">脉轮抽卡</button>
-            <button id="colorBtn">颜色抽卡</button>
-            <button id="tarotBtn">塔罗牌抽卡</button>
-        </nav>
+        <h1>抽卡结果</h1>
     </header>
 
-    <!-- 卡片展示区 -->
-    <main id="mainContent">
-        <section id="probability" class="card-section">
-            <h2>概率抽卡</h2>
-            <button onclick="drawProbabilityCard()">抽卡</button>
-            <div id="probabilityResult"></div>
-        </section>
+    <!-- 卡片显示区域 -->
+    <main>
+        <div id="cardDisplay">
+            <p>您抽到了：<span id="cardResult">请点击下方按钮开始抽卡</span></p>
+        </div>
 
-        <section id="chakra" class="card-section">
-            <h2>脉轮抽卡</h2>
-            <button onclick="drawChakraCard()">抽脉轮</button>
-            <div id="chakraResult"></div>
-        </section>
-
-        <section id="color" class="card-section">
-            <h2>颜色抽卡</h2>
-            <button onclick="drawColorCard()">抽颜色</button>
-            <div id="colorResult"></div>
-        </section>
-
-        <section id="tarot" class="card-section">
-            <h2>塔罗牌抽卡</h2>
-            <button onclick="drawTarotCard()">抽1张塔罗牌</button>
-            <div id="tarotResult"></div>
-        </section>
+        <!-- 抽卡按钮 -->
+        <button id="drawCardBtn">开始抽卡</button>
     </main>
 
     <footer>
-        <p>感谢使用抽卡网站！</p>
+        <p>感谢使用抽卡工具！</p>
     </footer>
 
     <script src="script.js"></script>
